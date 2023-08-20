@@ -22,28 +22,25 @@
 
 // in this code if i % 2 == 0 then output is even 
 // in this code if i % 2 !== 0 then output is odd
-var oddNumber = 0;
-var evenNumber = 0;
-for (i=27; i>0; i--) {
-    // console.log(i)
-    if (i % 2 !== 0) {
-        console.log(` ${i} - this odd number`)
-        oddNumber+=1
-    }
-    else{
-        console.log(` ${i} - this even number`)
-        evenNumber+=1 
-    }
-}
 
-console.log("There are total" , " " , oddNumber,  " " , "odd numbers")
-console.log(`There are total ${evenNumber}  even numbers`)
+// var oddNumber = 0;
+// var evenNumber = 0;
+// for (i=14; i>0; i--) {
+//     // console.log(i)
+//     if (i % 2 !== 0) {
+//         console.log(` ${i} - this odd number`)
+//         oddNumber+=1
+//     }
+//     else{
+//         console.log(` ${i} - this even number`)
+//         evenNumber+=1 
+//     }
+// }
 
+// console.log("There are total" , " " , oddNumber,  " " , "odd numbers")
+// console.log(`There are total ${evenNumber}  even numbers`)
 
 // **********************************************************************
-
-
-
 // for (var i = 100; i >= 50; i = i - 1) {
 //     console.log(i)
 //     if (i == 80) {
@@ -52,7 +49,30 @@ console.log(`There are total ${evenNumber}  even numbers`)
 //     }
 // }
 
+// for (var i = 0; i < 15; i++) {
+//     if(i == 7){
+//         console.log("We got 7")
+//         continue
+//     }
+//     else{
+//         console.log(i)
+//     }
+// }
 
+// console.log("for loop end")
+
+// for (var i = 15; i > 0; i--) {
+//     if(i == 8){
+//         console.log("We got 8")
+//         continue
+//     }
+//     else{
+//         console.log(i)
+//     }
+// }
+
+
+// **********************************************************************
 
 // Q. Find numbers who are even from 35 - 256;
 
@@ -100,15 +120,17 @@ console.log(`There are total ${evenNumber}  even numbers`)
 
 // Q Find out addition of first 10 natural numbers who are even ...
 
-// var result = 0;
+var result = 0;
 
-// for (var i = 1; i <= 10; i++) {
-//     if (i % 2 == 0) {
-//         result = result + i;
-//     }
-// }
+for (var i = 1; i <= 10; i++) {
+    console.log(i);
+    if (i % 2 == 0) {
+        result = result + i;
+        console.log(result, "this is result value");
+    }
+}
 
-// console.log(result);
+console.log(result);
 
 
 
