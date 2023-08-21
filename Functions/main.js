@@ -1,9 +1,65 @@
-const array = [1, 2, 3, 4, 5, 6, 7];
-// , 8, 9, 94, 23, 45, 67, 12
-const target = 10;
-console.log(array.length)      //length is 7
-console.log(array.length-1)    //length is 7
-console.log(array.length-2)    //length is 5
+let x = myFunction(4, 3);
+
+function myFunction(a, b) {
+// Function returns the product of a and b
+  return a * b;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const array = [1, 2, 3, 4, 5, 6, 7];
+// // , 8, 9, 94, 23, 45, 67, 12
+// const target = 10;
+// console.log(array.length)      //length is 7
+// console.log(array.length-1)    //length is 7
+// console.log(array.length-2)    //length is 5
 
 // i j k
 // 0 1 2
@@ -20,27 +76,27 @@ console.log(array.length-2)    //length is 5
 
 
 
-for (var i = 0; i < array.length - 2; i++) {
-    // console.log(array[i])  //...array[i] means ek ek element milega yaha se
-    for (var j = i + 1; j < array.length - 1; j++) {
-        // if (array[i] + array[j] == target) {
-        //     console.log(array[i], array[j])
-        // }
-        for (var k = j + 1; k < array.length; k++) {
-            console.log(i, j, k)
-            // console.log(array[i], array[j], array[k])
+// for (var i = 0; i < array.length - 2; i++) {
+//     // console.log(array[i])  //...array[i] means ek ek element milega yaha se
+//     for (var j = i + 1; j < array.length - 1; j++) {
+//         // if (array[i] + array[j] == target) {
+//         //     console.log(array[i], array[j])
+//         // }
+//         for (var k = j + 1; k < array.length; k++) {
+//             console.log(i, j, k)
+//             // console.log(array[i], array[j], array[k])
 
-            // if (array[i] + array[j] + array[k] == target) {
-            //     console.log(array[i], array[j], array[k])
-            // }
-            // console.log(i, j, k)
-            // k++  - 2 - 3 - 4 -5 - 6 -7 -8
-            // k 3
-        }
-        // j++ 1- 2
-    }
-    i++
-}
+//             // if (array[i] + array[j] + array[k] == target) {
+//             //     console.log(array[i], array[j], array[k])
+//             // }
+//             // console.log(i, j, k)
+//             // k++  - 2 - 3 - 4 -5 - 6 -7 -8
+//             // k 3
+//         }
+//         // j++ 1- 2
+//     }
+//     i++
+// }
 
 
 // console.log("First")

@@ -47,24 +47,62 @@
 
 // ***************************************************************************
 
-var arr = [2,3,7,5,10];
-        // 0,1,2,3,4
+// var arr = [2,3,7,5,10,3];
+//         // 0,1,2,3,4
 
+// var target = 10;
+
+// for(i = 0; i < arr.length; i++){
+//     // console.log(i)
+//     for(j = i+1; j<arr.length; j++){
+//         console.log(i, arr[i], j, arr[j])
+//         if(arr[i] + arr[j] == target){
+//             // console.log(arr[i],"+",arr[j], "=", target)
+//         }
+//     }
+// }
+
+// i,ith,j,jth
+// 0 2 1 3
+// 0 2 2 7
+// 0 2 3 5
+// 0 2 4 10
+// 0 2 5 3
+// 1 3 2 7
+// 1 3 3 5
+// 1 3 4 10
+// 1 3 5 3
+// 2 7 3 5
+// 2 7 4 10
+// 2 7 5 3
+// 3 5 4 10
+// 3 5 5 3
+// 4 10 5 3
+
+// ***************************************************************************
+// Q) add all the possible 3 nos whose addition will be 12
+
+var arr = [1,2,3,4,5,6,7,8,9,94,23,45,67,12,2,43,675,876,123];
 var target = 10;
+var possible = 0;
+var possible1 = [];
 
-for(i = 0; i < arr.length; i++){
-    // console.log(i)
-    for(j = i+1; j<arr.length; j++){
-        // console.log(i, arr[i], j, arr[j])
-        if(arr[i] + arr[j] == target){
-            console.log(arr[i],"+",arr[j], "=", target)
+for (i = 0; i< arr.length-2; i++){
+    for (j = i+1; j< arr.length-1; j++){
+        for (k = j+1; k< arr.length; k++){
+            // console.log(arr[i], arr[j], arr[k])
+            if(arr[i] + arr[j] + arr[k] == target){
+                console.log(arr[i], "+", arr[j], "+", arr[k], "=", target)
+                possible+=1;
+                // possible1.push(arr[i], "+", arr[j], "+", arr[k], "=", target)
+            }
         }
+        // console.log("k end new j start")
     }
+    // console.log("k end new i start")
 }
 
-
-
-
+console.log(possible)
 
 
 
