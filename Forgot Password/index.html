@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot</title>
+</head>
+
+<body>
+    <form action="#" onsubmit="enrolled(event)">
+        <label for="name">Name:</label> <br>
+        <input type="text" id="name" /> <br>
+        <label for="mail">Email:</label> <br>
+        <input type="email" id="mail" /> <br>
+        <label for="pass">Pass:</label> <br>
+        <input type="password" id="pass" /> <br>
+        <label for="phone">Phone no:</label> <br>
+        <input type="number" id="phone" /> <br><br>
+        <input type="button" value="Forgot" id="forgot"><br>
+        <button onclick="allemail()">All Email ID</button>
+        <input type="submit" />
+
+    </form>
+
+    <script>
+        function enrolled(event) {
+            event.preventDefault()
+            const userName = document.getElementById('name').value;
+            const userEmail = document.getElementById('mail').value;
+            const userPass = document.getElementById('pass').value;
+            const userPhone = document.getElementById('phone').value;
+
+            // console.log(userName, userEmail, userPhone)
+
+            if (userName && userEmail && userPass && userPhone) {
+                alert('all field filled!')
+
+                const userObject = { name: userName, email: userEmail, password: userPass, phone: userPhone }
+
+                console.log(userObject)
+
+                var arr = JSON.parse(localStorage.getItem("user")) || [];
+                arr.push(userObject)
+
+                localStorage.setItem("user", JSON.stringify(arr))
+
+                console.log(arr)
+
+            } else {
+                alert('fill fields!')
+            }
+        }
+
+        function allemail() {
+            // for(i = 0; i< arr.length; i++){
+            //         // console.log(i, arr[i].email)
+
+            //     }
+
+            // var index = JSON.parse(localStorage.getItem("user"));
+            // console.log(index[3].email)
+
+                var users = JSON.parse(localStorage.getItem("user"));
+
+                if (users && users.length > 0) {
+                    var userDetails = "";
+                    users.forEach(function (user) {
+                        userDetails += "Name: " + user.name + "\n";
+                        userDetails += "Email: " + user.email + "\n";
+                        userDetails += "Phone: " + user.phone + "\n\n";
+                    });
+                    alert(userDetails);
+                } else {
+                    alert("No users found.");
+                }
+
+                var emailDetails = [];
+                emailDetails.push(userDetails)
+
+                console.log(emailDetails)
+
+            }
+    </script>
+</body>
+
+</html>
+
+
+// <!-- ctrl+ b se sideka folder open close hota hai...  -->
