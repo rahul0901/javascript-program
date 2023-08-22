@@ -47,15 +47,29 @@
             console.log(userName, userEmail, userPass, userConfirmPass)   //in console
 
             if (userName && userEmail && userPass && userConfirmPass) {
-                alert("All fields are filled!")
+                // alert("All fields are filled!")
                 if (userPass === userConfirmPass) {
 
-                    alert("Pass and confirm pass Matched!")
+                    // alert("Pass and confirm pass Matched!")
 
                     // here Object is created and we want to store it inlocal storage 
                     const userObject = { name: userName, email: userEmail, password: userPass, confirmpass: userConfirmPass }
 
-                    localStorage.setItem("users", JSON.stringify(userObject))
+                    // creating array to store userObject..
+                    var arr = JSON.parse(localStorage.getItem("users"))||[];
+                    arr.push(userObject)
+
+                    // JS to LS 
+                    // here key we have introduced as users and value is userObject for our localStorage... 
+                    // afterwards we changed arr as value cause we want to store all user details in one array..
+                    localStorage.setItem("users", JSON.stringify(arr))
+
+                    document.getElementById('name').value = "";
+                    document.getElementById('email').value = "";                    
+                    document.getElementById('pass').value = "";                    
+                    document.getElementById('confirm').value = "";                    
+
+                    alert("Register Successfull")
 
                 } else {
                     alert("Pass and confirm pass Not Matched!")
@@ -75,8 +89,9 @@
         }
 
         function getusers(){
-            const allusers = JSON.parse(localStorage.getItem(users))
-            console.log(users)
+            // now here users is key which we setted in above code and its value is our userobject and now we asking users from ls to store in var user
+            var user = JSON.parse(localStorage.getItem("users"))
+            console.log(user)
         }
     </script>
 </body>
