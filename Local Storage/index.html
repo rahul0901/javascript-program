@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <style>
+        body {
+            width: 100%;
+            height: auto;
+        }
+
+        form {
+            width: 80%;
+            margin: auto;
+            border: 2px solid black;
+            /* text-align: center; */
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <form onsubmit="register(event)">
+        <label for="name">Name</label>
+        <input type="text" id="name"><br>
+        <label for="email">Email</label>
+        <input type="email" id="email"><br>
+        <label for="pass">Password</label>
+        <input type="password" id="pass"><br>
+        <label for="confirm">Confirm Password</label>
+        <input type="password" id="confirm"><br>
+        <input type="submit">
+    </form>
+    <button onclick="getusers()">Get all users</button>
+    <script>
+        function register(event) {
+            event.preventDefault()  //to remove default events when submit is clicked..
+            // will create var for every detail we want to store..
+            const userName = document.getElementById('name').value;
+            const userEmail = document.getElementById('email').value;
+            const userPass = document.getElementById('pass').value;
+            const userConfirmPass = document.getElementById('confirm').value;
+            console.log(userName, userEmail, userPass, userConfirmPass)   //in console
+
+            if (userName && userEmail && userPass && userConfirmPass) {
+                alert("All fields are filled!")
+                if (userPass === userConfirmPass) {
+
+                    alert("Pass and confirm pass Matched!")
+
+                    // here Object is created and we want to store it inlocal storage 
+                    const userObject = { name: userName, email: userEmail, password: userPass, confirmpass: userConfirmPass }
+
+                    localStorage.setItem("users", JSON.stringify(userObject))
+
+                } else {
+                    alert("Pass and confirm pass Not Matched!")
+                }
+            } else {
+                alert("Please fill all fields!")
+            }
+
+            // alert("inside form register")   //popup on web browser..
+            // console.log("inside form register")   //in console
+
+            // to get value at console 
+            // console.log(document.getElementById('name').value)
+            // console.log(document.getElementById('email').value)
+            // console.log(document.getElementById('pass').value)
+            // console.log(document.getElementById('confirm').value)
+        }
+
+        function getusers(){
+            const allusers = JSON.parse(localStorage.getItem(users))
+            console.log(users)
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+<!-- id="confirm" -->
