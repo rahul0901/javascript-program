@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+
+<body>
+    <form action="#" onsubmit="register(event)">
+        <label for="name">Name: </label> <br>
+        <input type="text" id="name"> <br>
+        <label for="mail">Email: </label> <br>
+        <input type="email" id="mail"> <br>
+        <label for="pass">Password: </label> <br>
+        <input type="password" id="pass"> <br>
+        <input type="submit" value="Sign in">
+        <button onclick="getuser()">Get all user</button>
+    </form>
+
+
+    <script>
+        function register(event) {
+            event.preventDefault()
+            // first step is to take value from all input tags and store them in LS..
+            const userName = document.getElementById('name').value;
+            const userEmail = document.getElementById('mail').value;
+            const userPass = document.getElementById('pass').value;
+
+            // console.log(userName, userEmail, userPass)
+
+            // now we have created const var and it will fetch data of every user..
+            // now we will add all data together in object then push that into ls..
+
+            if (userName && userEmail && userPass) {
+                const userObject = { name: userName, email: userEmail, password: userPass }
+                // console.log(userObject)
+
+                // now to store every user we will require an array..
+                var arr = JSON.parse(localStorage.getItem("user")) || [];
+
+                for (var i = 0; i < arr.length; i++) {
+                    if (arr[i].email === userEmail) {
+                        // arr[i].email
+                        return (alert("email id already exists.."))
+                    }
+                }
+                
+                arr.push(userObject)
+                // storing in ls userObject... 
+                localStorage.setItem("user", JSON.stringify(arr));
+
+                console.log(arr)
+
+                alert("successfully logged in")
+
+                document.getElementById('name').value = '';
+                document.getElementById('mail').value = '';
+                document.getElementById('pass').value = '';
+
+            } else {
+                alert("please fill all fields")
+            }
+        }
+
+        function getuser() {
+            var alluser = JSON.parse(localStorage.getItem("user"))
+            console.log(alluser)
+        }
+    </script>
+</body>
+
+</html>
