@@ -19,9 +19,12 @@
         <input type="number" id="phone" /> <br><br>
         <input type="button" value="Forgot" id="forgot"><br>
         <button onclick="allemail()">All Email ID</button>
+        <button type="button" onclick="document.getElementById('demo').innerHTML = index.mail, index.phone">Get all email id and phone no</button>
         <input type="submit" />
 
     </form>
+
+    <p id="demo"></p>
 
     <script>
         function enrolled(event) {
@@ -47,44 +50,56 @@
 
                 console.log(arr)
 
+                document.getElementById('name').value= '';
+                document.getElementById('mail').value= '';
+                document.getElementById('pass').value= '';
+                document.getElementById('phone').value= '';
+
+
             } else {
                 alert('fill fields!')
             }
         }
 
         function allemail() {
-            // for(i = 0; i< arr.length; i++){
-            //         // console.log(i, arr[i].email)
+            // for (i = 0; i < arr.length; i++) {
+            //     console.log(i, arr[i].email)
+            // }
 
-            //     }
+
+            var index = JSON.parse(localStorage.getItem("user"));
+            for (i = 0; i<index.length; i++){
+                console.log(`here is all mail id: ${index[i].email} & here's there phone no: ${index[i].phone}`)
+            }
+            
 
             // var index = JSON.parse(localStorage.getItem("user"));
-            // console.log(index[3].email)
+            // console.log(index.[])
 
-                var users = JSON.parse(localStorage.getItem("user"));
+            // var users = JSON.parse(localStorage.getItem("user"));
 
-                if (users && users.length > 0) {
-                    var userDetails = "";
-                    users.forEach(function (user) {
-                        userDetails += "Name: " + user.name + "\n";
-                        userDetails += "Email: " + user.email + "\n";
-                        userDetails += "Phone: " + user.phone + "\n\n";
-                    });
-                    alert(userDetails);
-                } else {
-                    alert("No users found.");
-                }
+            // if (users && users.length > 0) {
+            //     var userDetails = "";
+            //     users.forEach(function (user) {
+            //         userDetails += "Name: " + user.name + "\n";
+            //         userDetails += "Email: " + user.email + "\n";
+            //         userDetails += "Phone: " + user.phone + "\n\n";
+            //     });
+            //     alert(userDetails);
+            // } else {
+            //     alert("No users found.");
+            // }
 
-                var emailDetails = [];
-                emailDetails.push(userDetails)
+            // var emailDetails = [];
+            // emailDetails.push(userDetails)
 
-                console.log(emailDetails)
+            // console.log(emailDetails)
 
-            }
+        }
     </script>
 </body>
 
 </html>
 
 
-// <!-- ctrl+ b se sideka folder open close hota hai...  -->
+<!-- ctrl+ b se sideka folder open close hota hai...  -->
