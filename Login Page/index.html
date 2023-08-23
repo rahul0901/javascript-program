@@ -19,10 +19,12 @@
         <button onclick="getuser()">Get all user</button>
     </form>
 
+    <p id="demo"> dfbd</p>
+
 
     <script>
         function register(event) {
-            event.preventDefault()
+            event.preventDefault();
             // first step is to take value from all input tags and store them in LS..
             const userName = document.getElementById('name').value;
             const userEmail = document.getElementById('mail').value;
@@ -46,7 +48,7 @@
                         return (alert("email id already exists.."))
                     }
                 }
-                
+
                 arr.push(userObject)
                 // storing in ls userObject... 
                 localStorage.setItem("user", JSON.stringify(arr));
@@ -65,8 +67,15 @@
         }
 
         function getuser() {
-            var alluser = JSON.parse(localStorage.getItem("user"))
-            console.log(alluser)
+            const alluser = JSON.parse(localStorage.getItem("user"))
+            // console.log(alluser)
+            for (i = 0; i < alluser.length; i++) {
+                console.log(i, "user name is - ", alluser[i].name, "and mail id- ", alluser[i].email)
+
+                const data = document.getElementById("demo").innerHTML = [`user - ${alluser[i].name} and email - ${alluser[i].email} `];
+            }
+
+            // document.getElementById("demo").innerHTML = alluser[i].name;
         }
     </script>
 </body>
