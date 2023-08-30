@@ -37,7 +37,7 @@
 // **************************************************************************
 // Q3). array of number as input return smallest no' from array..my addition to code is return new array with numbers in descending order..
 var arr = [34, 563, 4662, 577, 487, 28, 9, 1656, 96, 3427, 9, 9897, 56, 22, 35, 34, 5, 6, 7, 8, 879, 90, 23, 56, 43, 52, 78, 20];
-var newArrDescending = [];
+// var newArrDescending = [];
 var smallNo = arr[0];
 
 // var smallNumber
@@ -53,3 +53,6 @@ function findSmall(small) {
 
 // findSmall(arr); ...nai likha toh bhi chlega console mai hi assign krkste hai
 console.log(findSmall(arr))
+
+// **************************************************************************
+
