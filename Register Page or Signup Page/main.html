@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="screen">
+        <form action="#" onsubmit="register(event)">
+            <label for="name">Name: </label> <br>
+            <input type="text" name="" id="name" /> <br>
+            <label for="email">Email: </label> <br>
+            <input type="email" name="" id="email" /> <br>
+            <label for="pass">Password: </label> <br>
+            <input type="password" name="" id="pass" /> <br>
+            <input type="submit" value="Sign In">
+        </form>
+        <button onclick="getUsers()">All Users</button>
+    </div>
+
+    <script>
+        function register(event) {
+            event.preventDefault();
+            const userName = document.getElementById('name').value;
+            const userEmail = document.getElementById('email').value;
+            const userPass = document.getElementById('pass').value;
+
+            if (userName && userEmail && userPass) {
+                // console.log(userName, userEmail, userPass)
+                // upto here it is visible in js but to store multiple users we need something taht can store all our data's so we choosed localStorage to store our data..
+
+                // now we will make our data in Object format key value pair.. 
+
+                const userObject = { user: userName, email: userEmail, pass: userPass }
+                console.log(userObject)
+
+                // to localStorage...
+                // while adding data to ls ie setitem --> use stringify and while fetching i.e getitem --> use parse
+                localStorage.setItem('users', JSON.stringify(userObject))
+
+                // var allUserArray = JSON.parse(localStorage.getItem('users')) || [];
+                // allUserArray.push(userObject)
+
+                // alert('register success')
+                // document.getElementById('name').value='';
+                // document.getElementById('email').value='';
+                // document.getElementById('pass').value='';
+
+            } else{
+                alert('fill all fields!')
+            }
+        }
+
+        function getUsers(){
+            var alluser = JSON.parse(localStorage.getItem('users'))
+            console.log(alluser)
+        }
+    </script>
+</body>
+
+</html>
+
+<!-- 
+1) craete a form tag and add all necessary part.
+2) then add script tag
+3) take value from input tag of html to js..
+
+ -->
