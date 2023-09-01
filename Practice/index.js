@@ -37,8 +37,8 @@
 // **************************************************************************
 // Q3). array of number as input return smallest no' from array..my addition to code is return new array with numbers in descending order..
 // var arr = [34, 563, 4662, 577, 487, 28, 9, 1656, 96, 3427, 9, 9897, 56, 22, 35, 34, 5, 6, 7, 8, 879, 90, 23, 56, 43, 52, 78, 20];
-// // var newArrDescending = [];
-// var smallNo = arr[0];
+// // var newArrDescending = []; ..ignore
+// var smallNo = arr[0]; ...assume krdiya
 
 // // var smallNumber
 
@@ -56,3 +56,19 @@
 
 // **************************************************************************
 
+var arr1 = [3,56,57,1000,937,23];
+var arr2 = [56,3,57,743,23];
+
+function findCommon(array1, array2){
+    var commonAray = [];
+    for (var i = 0; i< array1.length; i++){
+        for (var j = 0; j<array2.length; j++){
+            if(array1[i] === array2[j]){
+                commonAray.push(array1[i]);
+            }
+        }
+    }
+    return commonAray;
+}
+
+console.log(findCommon(arr1, arr2))
