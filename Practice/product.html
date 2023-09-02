@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="screen">
+        <form action="#" onsubmit="addProduct(event)">
+            <label for="pname">Product name</label> <br>
+            <input type="text" placeholder="add product name" id="pname"> <br>
+            <label for="pprice">Product price</label> <br>
+            <input type="number" placeholder="add product price" id="pprice"> <br>
+            <label for="pimage">Product image</label> <br>
+            <input type="text" placeholder="add product image url" id="pimage"> <br>
+            <input type="submit" value="submit"><br>
+            <input type="checkbox" name="check" id="check"> <label for="check">I accept Terms & Condition</label>
+        </form>
+    </div>
+
+    <script>
+        function addProduct(event) {
+            event.preventDefault();
+            const productName = document.getElementById('pname').value;
+            const productPrice = document.getElementById('pprice').value;
+            const productImage = document.getElementById('pimage').value;
+            const termsCondition = document.getElementById('check');
+
+            if (productName && productImage && productPrice && termsCondition.checked) {
+                var arr = JSON.parse(localStorage.getItem('users')) || [];
+                arr.push({ productName, productImage, productPrice,termsCondition: termsCondition.checked})
+                console.log(arr)
+                localStorage.setItem('users', JSON.stringify(arr))
+                document.getElementById('pname').value = '';
+                document.getElementById('pprice').value = '';
+                document.getElementById('pimage').value = '';
+
+                alert('product added')
+            } else{
+                alert('fill all fields')
+            }
+        }
+    </script>
+</body>
+
+</html>
