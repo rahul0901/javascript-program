@@ -83,18 +83,48 @@
 
 // Q4) reverse
 
-var arr = [2, 4, 5, 7];  //, 8, 9, 6, 10
+// var arr = [2, 4, 5, 7];  //, 8, 9, 6, 10
 
-// for (var i = arr.length; i>=0; i--){
-//     console.log(arr[i])
+// // for (var i = arr.length; i>=0; i--){
+// //     console.log(arr[i])
+// // }
+
+// function arrayReverse(array){
+//     var newarr = [];
+//     for (var i = array.length; i >= 0; i--){
+//         newarr.push(array[i])
+//     }
+//     return newarr
 // }
 
-function arrayReverse(array){
-    var newarr = [];
-    for (var i = array.length; i >= 0; i--){
-        newarr.push(array[i])
+// console.log(arrayReverse(arr))
+
+// *********************************************************************
+
+// var arr = [2,3,4,5,6];
+
+// function findPrime(array){
+//     var allPrime = [];
+//     for(var i = 0; i<array.length; i++){
+//         if(array[i] % 1 == 0 && array[i] % array[i] == 0){
+//             allPrime.push(array[i]);
+//         }
+//     }
+//     return allPrime
+// }
+
+// console.log(findPrime(arr))
+
+
+var arr = [2, 3, 4, 5, 6]
+
+for (var i = 0; i < arr.length; i++) {
+    var allPrime = [];
+    if (arr[i] % 1 == 0) {
+        console.log(arr[i])
+        // allPrime.push(arr[i]);
     }
-    return newarr
 }
 
-console.log(arrayReverse(arr))
+console.log(allPrime)
+
