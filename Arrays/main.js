@@ -82,27 +82,27 @@
 // ***************************************************************************
 // Q) add all the possible 3 nos whose addition will be 12
 
-var arr = [1,2,3,4,5,6,7,8,9,94,23,45,67,12,2,43,675,876,123];
-var target = 10;
-var possible = 0;
-var possible1 = [];
+// var arr = [1,2,3,4,5,6,7,8,9,94,23,45,67,12,2,43,675,876,123];
+// var target = 10;
+// var possible = 0;
+// var possible1 = [];
 
-for (i = 0; i< arr.length-2; i++){
-    for (j = i+1; j< arr.length-1; j++){
-        for (k = j+1; k< arr.length; k++){
-            // console.log(arr[i], arr[j], arr[k])
-            if(arr[i] + arr[j] + arr[k] == target){
-                console.log(arr[i], "+", arr[j], "+", arr[k], "=", target)
-                possible+=1;
-                // possible1.push(arr[i], "+", arr[j], "+", arr[k], "=", target)
-            }
-        }
-        // console.log("k end new j start")
-    }
-    // console.log("k end new i start")
-}
+// for (i = 0; i< arr.length-2; i++){
+//     for (j = i+1; j< arr.length-1; j++){
+//         for (k = j+1; k< arr.length; k++){
+//             // console.log(arr[i], arr[j], arr[k])
+//             if(arr[i] + arr[j] + arr[k] == target){
+//                 console.log(arr[i], "+", arr[j], "+", arr[k], "=", target)
+//                 possible+=1;
+//                 // possible1.push(arr[i], "+", arr[j], "+", arr[k], "=", target)
+//             }
+//         }
+//         // console.log("k end new j start")
+//     }
+//     // console.log("k end new i start")
+// }
 
-console.log(possible)
+// console.log(possible)
 
 
 
