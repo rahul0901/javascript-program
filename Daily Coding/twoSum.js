@@ -9,17 +9,28 @@ var result = [];
 
 function twoSum(arr) {
     for (i = 0; i < arr.length; i++) {
-        // console.log(i)
+        console.log(i)
         for (j = i + 1; j < arr.length; j++) {
-            // console.log(i, arr[i], j, arr[j])
+            console.log(i, arr[i], j, arr[j])
             if (arr[i] + arr[j] == target) {
-                console.log(arr[i], "+", arr[j], "=", target)
+                // console.log(arr[i], "+", arr[j], "=", target)
             }
         }
     }
 }
 
 twoSum(array)
+
+
+// var twoSum = function (nums, target) {
+//     for (var i = 0; i < nums.length; i++) {
+//         for (var j = i+1; j < nums.length; j++) {
+//             if (nums[i] + nums[j] == target) {
+//                 return [i,j]
+//             }
+//         }
+//     }
+// };
 
 
 
