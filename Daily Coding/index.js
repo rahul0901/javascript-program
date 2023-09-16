@@ -26,16 +26,48 @@
 // Output: true
 // Explanation: 121 reads as 121 from left to right and from right to left.
 
-var x = 1234321;  //length is 7 which is 0 to 6
-// var str = x.toString();
-// console.log(str.length)
-// console.log(str.length-1, str[str.length-1])
-var isPalindrome = function (x) {
-    // console.log(x.length)
-    var str = x.toString();
-    for (var i = 0; i < str.length / 2; i++) {
-        console.log(str[i], i)
-    }
-};
+// var x = 1234321;  //length is 7 which is 0 to 6
+// // var str = x.toString();
+// // console.log(str.length)
+// // console.log(str.length-1, str[str.length-1])
+// var isPalindrome = function (x) {
+//     // console.log(x.length)
+//     var str = x.toString();
+//     for (var i = 0; i < str.length / 2; i++) {
+//         console.log(str[i], i)
+//     }
+// };
 
-console.log(isPalindrome())
+// console.log(isPalindrome())
+
+// -------------------------------------------------------------------
+// var num = 10;
+var num = 4;
+// var num = 0;
+
+function starPattern(n){
+    for(var i = 0; i<n; i++){
+        var pattern = "";
+        for (var j = 0; j<i+1; j++){
+            pattern+="*";
+        }
+        console.log(pattern)
+    }
+}
+
+starPattern(num)
+
+
+// var num = 3;
+
+// function starPattern(n){
+//     for(var i = 0; i<n; i++){
+//         var pattern = "";
+//         for (var j = i+1; j<n; j++){
+//             pattern+="*";
+//         }
+//         console.log(pattern)
+//     }
+// }
+
+// starPattern(num)
