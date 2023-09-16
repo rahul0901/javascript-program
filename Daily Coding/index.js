@@ -42,20 +42,20 @@
 
 // -------------------------------------------------------------------
 // var num = 10;
-var num = 4;
-// var num = 0;
+// var num = 4;
+// // var num = 0;
 
-function starPattern(n){
-    for(var i = 0; i<n; i++){
-        var pattern = "";
-        for (var j = 0; j<i+1; j++){
-            pattern+="*";
-        }
-        console.log(pattern)
-    }
-}
+// function starPattern(n){
+//     for(var i = 0; i<n; i++){
+//         var pattern = "";
+//         for (var j = 0; j<i+1; j++){
+//             pattern+="*";
+//         }
+//         console.log(pattern)
+//     }
+// }
 
-starPattern(num)
+// starPattern(num)
 
 
 // var num = 3;
@@ -71,3 +71,53 @@ starPattern(num)
 // }
 
 // starPattern(num)
+
+// var num = 3;
+// // var num = 5;
+// // var num = 6;
+
+// function findFactorial(n){
+//     var factoraialOfNumber = 1;
+//     for(var i = n; i>=1; i--){
+//         // console.log(i)
+//         factoraialOfNumber= factoraialOfNumber * i;
+//     }
+//     return (`factorial of ${num} is ${factoraialOfNumber}`);
+// }
+
+// console.log(findFactorial(num))
+
+
+// FIbonacci Series..
+// 0, 1, 1, 2, 3, 5, 8, 13, 21, ...
+
+
+// var number = 8;
+// function findFibonacci(n) {
+//     var num = [0, 1];
+//     for (var i = 2; i < n; i++) {
+//         var newValue = num[i - 1] + num[i - 2];
+//         num.push(newValue);
+//     }
+//     return num;
+// }
+
+// console.log(findFibonacci(number))
+
+// var num = 5;
+// var arr = [0,1];
+
+// for(var i = 2; i<num; i++){
+//     var newVal = arr[i-1] + arr[i-2];
+//     console.log(newVal)
+//     arr.push(newVal);
+// }
+
+// console.log(arr)
+
+var string = "abcba"
+
+for (var i = 0; i<(string.length/2);i++){
+    // console.log(i, string[i])
+    if(string[i])
+}
