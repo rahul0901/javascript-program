@@ -127,3 +127,17 @@
 // }
 
 // console.log(checkP(string))
+
+var x = 123;
+// console.log(x.length)
+
+var newX = x.toString();
+var finalX = '';
+for( var i = newX.length-1; i>=0; i--){
+    // console.log(newX[i])
+    // console.log(typeof(newX[i]))
+    finalX = finalX + newX[i].toString();
+    // return finalX;
+}
+
+console.log(finalX)
