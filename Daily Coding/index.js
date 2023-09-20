@@ -6,19 +6,20 @@
 // solution: 
 
 // var num = [2, 7, 11, 15, 2];
-// var num = [3,2,4];
-// var target = 6;
-// function twoSum(arr) {
-//     for (var i = 0; i < arr.length; i++) {
-//         for (var j = i + 1; j < arr.length; j++) {
-//             if (arr[i] + arr[j] == target) {
-//                 return [i, j];
-//             }
-//         }
-//     }
-// }
+// var num = [11, 15, 3, 25, 76, 6]
+var num = [3, 5, 4, 2];
+var target = 6;
+function twoSum(arr) {
+    for (var i = 0; i < arr.length; i++) {
+        for (var j = i + 1; j < arr.length; j++) {
+            if (arr[i] + arr[j] == target) {
+                return [i, j];
+            }
+        }
+    }
+}
 
-// console.log(twoSum(num));
+console.log(twoSum(num));
 
 // -------------------------------------------------------------------
 // Given an integer x, return true if x is a palindrome, and false otherwise.
@@ -115,9 +116,9 @@
 
 // console.log(arr)
 
-var string = "abcba"
+// var string = "abcba"
 
-for (var i = 0; i<(string.length/2);i++){
-    // console.log(i, string[i])
-    if(string[i])
-}
+// for (var i = 0; i<(string.length/2);i++){
+//     // console.log(i, string[i])
+//     if(string[i])
+// }
