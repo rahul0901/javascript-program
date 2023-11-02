@@ -14,7 +14,7 @@ var numJewelsInStones = function (jewels, stones) {
     var c = 0;
     for (let i = 0; i < stones.length; i++) {
         if (jewels.includes(stones[i])) {
-            c += 1;
+            c += 1; 
         }
     }
     return c;
