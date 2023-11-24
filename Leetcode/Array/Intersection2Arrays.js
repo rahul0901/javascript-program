@@ -26,3 +26,17 @@
 //     }
 //     return arr;
 // };
+
+// var intersection = function(nums1, nums2) {
+//     var final = [];
+//     for(let i = 0; i<nums2.length; i++){
+//         for(let j = 0; j<nums1.length; j++){
+//             if(nums2[i] == nums1[j]){
+//                 if(!final.includes(nums2[i])){
+//                     final.push(nums2[i])
+//                 }
+//             }
+//         }
+//     }
+//     return final;
+// };
